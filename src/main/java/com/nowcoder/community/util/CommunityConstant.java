@@ -12,5 +12,9 @@ public interface CommunityConstant {
 
     int REMEMBER_EXPIRED_SECONDS = 3600*24*30; //“记住我”状态的登录凭证的超时时间
 
+    int ENTITY_TYPE_POST = 1; //评论实体类型：帖子
+
+    int ENTITY_TYPE_COMMENT = 2; //评论实体类型：评论
+
 
 }

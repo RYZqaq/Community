@@ -1,6 +1,7 @@
 package com.nowcoder.community.controller;
 
 import com.nowcoder.community.service.AlphaService;
+import com.nowcoder.community.util.CommunityUtil;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,4 +126,13 @@ public class AlphaController {
 
         return list;
     }
+
+    @RequestMapping(path = "/ajax", method = RequestMethod.POST)
+    @ResponseBody
+    public String testAjax(String name, int age) {
+        System.out.println(name);
+        System.out.println(age);
+        return CommunityUtil.getJSONString(0,"操作成功！");
+    }
+
 }
